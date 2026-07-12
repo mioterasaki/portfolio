@@ -1,2 +1,2 @@
 # portfolio
-Folder fro my website
+Folder for my website

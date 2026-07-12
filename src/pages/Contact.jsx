@@ -1,3 +1,4 @@
+import Nav from '../components/Nav'
 import ContactCard from '../components/ContactCard'
 import { MailIcon, LinkedinIcon, CalendarIcon, ArrowDownIcon, LanguagesIcon } from '../components/icons'
 import '../styles/Contact.css'
@@ -9,13 +10,7 @@ const RESUME_URL = '/resume/Mio_Terasaki_Master_Resume_v2.pdf'
 export default function Contact() {
   return (
     <div className="page" data-screen-label="Contact">
-      <nav className="nav">
-        <a className="nav__brand" href="/">Mio Terasaki</a>
-        <div className="nav__links">
-          <a className="nav__link" href="/experience">Experience</a>
-          <a className="nav__link nav__link--active" href="/contact">Contact</a>
-        </div>
-      </nav>
+      <Nav active="contact" showCta={false} />
 
       <header className="header">
         <div>

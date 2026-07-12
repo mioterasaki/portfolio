@@ -1,0 +1,217 @@
+/* ============================================================
+   SHARED COMPONENTS — nav, buttons, badges, testimonials
+   Ported from the brand system component bundle.
+   ============================================================ */
+
+/* --- Nav (sage-900 bar, shared by all pages) --- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 64px;
+  background: var(--sage-900);
+}
+
+.nav__brand {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--dark-text);
+  letter-spacing: -0.02em;
+}
+.nav__brand:hover {
+  color: var(--dark-text);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav__link {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--dark-muted);
+}
+.nav__link:hover,
+.nav__link--active,
+.nav__link--active:hover {
+  color: var(--dark-text);
+}
+
+/* --- Button (pill CTA) --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  line-height: 1;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--dur-fast) var(--ease-standard),
+              border-color var(--dur-fast) var(--ease-standard),
+              color var(--dur-fast) var(--ease-standard),
+              transform var(--dur-fast) var(--ease-standard);
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--sm {
+  padding: 9px 16px;
+  font-size: var(--text-sm);
+  gap: 6px;
+}
+.btn--md {
+  padding: 12px 22px;
+  font-size: var(--text-base);
+  gap: 8px;
+}
+
+.btn--primary {
+  background: var(--brand);
+  color: var(--brand-contrast);
+  border: 1.5px solid var(--brand);
+}
+.btn--primary:hover {
+  background: var(--brand-hover);
+  border-color: var(--brand-hover);
+  color: var(--brand-contrast);
+}
+
+.btn--secondary {
+  background: var(--anchor);
+  color: #fff;
+  border: 1.5px solid var(--anchor);
+}
+.btn--secondary:hover {
+  background: var(--anchor-hover);
+  border-color: var(--anchor-hover);
+  color: #fff;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--anchor);
+  border: 1.5px solid var(--border-strong);
+}
+.btn--ghost:hover {
+  border-color: var(--anchor);
+  color: var(--anchor-hover);
+}
+
+.btn__icon {
+  display: inline-flex;
+}
+.btn--sm .btn__icon svg {
+  width: 16px;
+  height: 16px;
+}
+.btn--md .btn__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* --- Badge (pill tag) --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.02em;
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  align-self: flex-start;
+}
+.badge--terracotta {
+  background: var(--brand-soft);
+  color: var(--terracotta-800);
+}
+.badge--gold {
+  background: var(--accent-soft);
+  color: var(--gold-700);
+}
+.badge--sage {
+  background: var(--anchor-soft);
+  color: var(--sage-700);
+}
+.badge--neutral {
+  background: var(--surface-sunken);
+  color: var(--text-body);
+}
+
+/* --- Testimonial (dark variant) --- */
+.testimonial {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--dark-surface);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial__mark {
+  color: var(--gold-500);
+  line-height: 0;
+}
+
+.testimonial__quote {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  color: var(--dark-text);
+  letter-spacing: var(--tracking-tight);
+}
+
+.testimonial__caption {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.testimonial__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, var(--gold-500), var(--terracotta-500));
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: var(--weight-medium);
+  font-size: 16px;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.testimonial__who {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial__name {
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+  color: var(--dark-text);
+}
+
+.testimonial__title {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--dark-muted);
+}

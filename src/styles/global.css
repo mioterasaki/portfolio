@@ -39,6 +39,15 @@ a:hover {
   color: var(--ink);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
 .eyebrow {
   font-family: var(--font-body);
   font-weight: var(--weight-semibold);

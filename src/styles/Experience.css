@@ -1,0 +1,206 @@
+/* ============================================================
+   EXPERIENCE PAGE — ported from Experience.dc.html
+   ============================================================ */
+
+.experience {
+  min-width: 1080px;
+}
+
+/* --- Header --- */
+.exp-header {
+  background: var(--sage-900);
+  padding: 72px 64px 64px;
+}
+
+.exp-header__eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-500);
+}
+
+.exp-header__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--dark-text);
+  margin: 16px 0 18px;
+  max-width: 22ch;
+}
+
+.exp-header__lede {
+  font-size: var(--text-md);
+  line-height: 1.65;
+  color: var(--dark-muted);
+  max-width: 58ch;
+  margin: 0;
+}
+
+/* --- Timeline --- */
+.timeline {
+  background: var(--paper);
+  padding: 64px 64px;
+}
+
+.role {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.role:last-child {
+  border-bottom: none;
+}
+
+.role__when {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.role__dates {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.role__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-2xl);
+  letter-spacing: -0.01em;
+  color: var(--text-strong);
+  margin: 0 0 4px;
+}
+
+.role__company {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.role__bullets {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+/* --- Skills + education --- */
+.skills-edu {
+  background: var(--surface-sunken);
+  padding: 64px 64px;
+}
+
+.skills-edu__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.skills-edu__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-3xl);
+  letter-spacing: -0.02em;
+  color: var(--text-strong);
+  margin: 0 0 24px;
+}
+
+.skills__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.edu__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--stone-200);
+  align-items: baseline;
+}
+.edu-row:last-child {
+  border-bottom: none;
+}
+
+.edu-row__name {
+  font-size: var(--text-sm);
+  color: var(--text-body);
+}
+.edu-row__name--strong {
+  color: var(--text-strong);
+  font-weight: 600;
+}
+
+.edu-row__year {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+.edu-row__year--brand {
+  color: var(--brand);
+}
+
+/* --- Footer CTA (dark) --- */
+.exp-footer {
+  background: var(--sage-900);
+  padding: 56px 64px;
+}
+
+.exp-footer__grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+}
+
+.exp-footer__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-3xl);
+  letter-spacing: -0.02em;
+  color: var(--dark-text);
+  margin: 0 0 8px;
+}
+
+.exp-footer__body {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--dark-muted);
+  margin: 0;
+}
+
+.exp-footer__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.exp-footer__meta {
+  border-top: 1px solid rgba(243, 235, 221, 0.15);
+  margin-top: 40px;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--dark-muted);
+}

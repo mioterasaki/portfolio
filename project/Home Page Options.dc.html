@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="design_doc_mode" content="canvas">
+  <link rel="stylesheet" href="_ds/mio-terasaki-brand-system-051fd5f7-9900-4e29-8509-4bddfe3cea54/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/mio-terasaki-brand-system-051fd5f7-9900-4e29-8509-4bddfe3cea54/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/mio-terasaki-brand-system-051fd5f7-9900-4e29-8509-4bddfe3cea54/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/mio-terasaki-brand-system-051fd5f7-9900-4e29-8509-4bddfe3cea54/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/mio-terasaki-brand-system-051fd5f7-9900-4e29-8509-4bddfe3cea54/tokens/effects.css">
+  <link rel="stylesheet" href="_ds/mio-terasaki-brand-system-051fd5f7-9900-4e29-8509-4bddfe3cea54/tokens/base.css">
+  <link rel="stylesheet" href="_ds/mio-terasaki-brand-system-051fd5f7-9900-4e29-8509-4bddfe3cea54/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="_ds/mio-terasaki-brand-system-051fd5f7-9900-4e29-8509-4bddfe3cea54/_ds_bundle.js"></script>
+  <style>
+    body{margin:0;background:#f0eee9;font-family:var(--font-body)}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{color:var(--brand-press)}
+    .dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+    .dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 8px}
+    .dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+    .dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+    .dv-note{max-width:760px;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.55);margin:0 0 22px}
+    .dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+    .dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+    .dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+    .dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+    .dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+    .dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+    .dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+  </style>
+</helmet>
+
+<section class="dv-turn" id="t1">
+  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Home page — three directions</span></div>
+  <p class="dv-note">Assumptions: multi-page site (Home / Experience / Contact) — these are the Home page. The culture-bridge is the central theme in all three; they differ in hero treatment, tone and rhythm. All copy is drawn from your résumé; testimonials are placeholders; drop your headshot onto any portrait frame. The three bridge insights are examples — swap in the specific differences you've observed.</p>
+  <div class="dv-opts">
+
+    <!-- ============ OPTION 1a — Warm editorial ============ -->
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Warm editorial — asymmetric hero, by the book</div>
+      <div class="dv-card" style="width: 1240px" data-screen-label="1a Warm editorial home">
+
+        <nav style="display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: var(--paper); border-bottom: 1px solid var(--border-subtle)">
+          <span style="font-family: var(--font-display); font-size: var(--text-xl); font-weight: 600; color: var(--text-strong); letter-spacing: -0.02em">Mio Terasaki</span>
+          <div style="display: flex; align-items: center; gap: 30px">
+            <a href="#1a" style="font-size: var(--text-sm); font-weight: 500; color: var(--text-body)">Experience</a>
+            <a href="#1a" style="font-size: var(--text-sm); font-weight: 500; color: var(--text-body)">The bridge</a>
+            <a href="#1a" style="font-size: var(--text-sm); font-weight: 500; color: var(--text-body)">Contact</a>
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" size="sm" variant="secondary" hint-size="110px,36px">Let's talk</x-import>
+          </div>
+        </nav>
+
+        <div style="background: var(--paper); padding: 72px 48px 56px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 60px; align-items: center">
+          <div>
+            <div style="font-family: var(--font-body); font-weight: 600; font-size: var(--text-xs); letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand)">Bilingual JP / EN · Customer success · Operations</div>
+            <h1 style="font-family: var(--font-display); font-weight: 500; font-size: 64px; line-height: 1.04; letter-spacing: -0.02em; color: var(--text-strong); margin: 18px 0 22px">A bridge between Japanese and Western business.</h1>
+            <p style="font-size: var(--text-md); line-height: 1.65; color: var(--text-body); max-width: 48ch; margin: 0">I'm a bilingual customer-experience and operations professional with 10+ years across Japan and Australia. I've sold to Toyota in Saga and resolved 400 tickets a day in Melbourne — and I've learned exactly where the two business cultures diverge, and how to bridge them.</p>
+            <div style="display: flex; gap: 14px; margin-top: 32px">
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="primary" icon-right="arrow-right" hint-size="150px,44px">Let's talk</x-import>
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="ghost" hint-size="170px,44px">View experience</x-import>
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 30px; flex-wrap: wrap">
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Badge" tone="sage" icon="map-pin" hint-size="180px,28px">Melbourne, VIC · Remote</x-import>
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Badge" tone="neutral" icon="languages" hint-size="230px,28px">Native Japanese / Fluent English</x-import>
+            </div>
+          </div>
+          <div style="position: relative">
+            <div style="aspect-ratio: 4/5; border-radius: var(--radius-xl); overflow: hidden; background: linear-gradient(150deg, var(--gold-500), var(--terracotta-500)); box-shadow: var(--shadow-lg); position: relative">
+              <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hs-1a" shape="rect" fit="cover" placeholder="Drop your headshot" hint-size="100%,100%"></x-import>
+            </div>
+            <div style="position: absolute; bottom: -22px; right: -14px; background: var(--surface-card); border-radius: var(--radius-lg); padding: 18px 22px; box-shadow: var(--shadow-lg); border: 1.5px solid var(--border-subtle)">
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Stat" value="95%+" label="QA score at Easygo (Stake.com)" accent="sage" hint-size="220px,80px"></x-import>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--paper); padding: 40px 48px 64px">
+          <div style="background: var(--surface-sunken); border-radius: var(--radius-lg); padding: 36px 44px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px">
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Stat" value="10+ yrs" label="across Japan &amp; Australia" hint-size="100%,80px"></x-import>
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Stat" value="−25%" label="ticket resolution time, via a workflow I designed" accent="sage" hint-size="100%,80px"></x-import>
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Stat" value="Top 5%" label="of salespeople at AmazingTalker" hint-size="100%,80px"></x-import>
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Stat" value="400+" label="clients retained over 7 years" accent="sage" hint-size="100%,80px"></x-import>
+          </div>
+        </div>
+
+        <div style="background: var(--paper); padding: 24px 48px 72px; border-top: 1px solid var(--border-subtle)">
+          <div style="padding-top: 48px">
+            <div style="font-family: var(--font-body); font-weight: 600; font-size: var(--text-xs); letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand)">The bridge</div>
+            <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-3xl); letter-spacing: -0.02em; color: var(--text-strong); margin: 14px 0 10px; max-width: 22ch">The differences I've learned to work across — first-hand, on both sides.</h2>
+            <p style="font-size: var(--text-base); line-height: 1.65; color: var(--text-body); max-width: 60ch; margin: 0 0 36px">Born and trained in Japanese enterprise sales, then a decade in Australian customer operations. These aren't observations from a textbook — they're playbooks I run daily.</p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px">
+              <div style="background: var(--surface-card); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 30px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 12px">
+                <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--brand)">根回し · nemawashi</span>
+                <h3 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-xl); color: var(--text-strong); margin: 0">The decision happens before the meeting</h3>
+                <p style="font-size: var(--text-sm); line-height: 1.65; color: var(--text-body); margin: 0">In Japan, consensus is built one stakeholder at a time — the meeting confirms it. In the West, the meeting is the decision. I prepare accounts both ways, so nothing stalls.</p>
+              </div>
+              <div style="background: var(--surface-card); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 30px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 12px">
+                <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--brand)">信頼 · shinrai</span>
+                <h3 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-xl); color: var(--text-strong); margin: 0">Relationship first, contract second</h3>
+                <p style="font-size: var(--text-sm); line-height: 1.65; color: var(--text-body); margin: 0">Japanese buyers invest in the person over years; Western buyers buy the outcome this quarter. I've closed 40+ public-sector accounts in Saga and renewed 400+ clients in Sydney — both playbooks work, at the right table.</p>
+              </div>
+              <div style="background: var(--surface-card); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 30px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 12px">
+                <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--brand)">おもてなし · omotenashi</span>
+                <h3 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-xl); color: var(--text-strong); margin: 0">Service is a standard, not a differentiator</h3>
+                <p style="font-size: var(--text-sm); line-height: 1.65; color: var(--text-body); margin: 0">Japanese service culture sets an uncompromising floor. I bring that floor to high-volume Western support — 95%+ QA across 100–400 daily touchpoints.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--paper); padding: 0 48px 72px">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px">
+            <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-3xl); letter-spacing: -0.02em; color: var(--text-strong); margin: 0">Selected experience</h2>
+            <a href="#1a" style="font-size: var(--text-sm); font-weight: 500">All experience →</a>
+          </div>
+          <div style="display: flex; flex-direction: column">
+            <div style="display: grid; grid-template-columns: 200px 1fr 260px; gap: 32px; padding: 26px 0; border-bottom: 1px solid var(--border-subtle); align-items: baseline">
+              <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--text-muted)">2023 – 2026</span>
+              <div>
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); font-weight: 500; color: var(--text-strong)">Customer Service Representative — Easygo (Stake.com)</div>
+                <p style="font-size: var(--text-sm); line-height: 1.6; color: var(--text-body); margin: 6px 0 0; max-width: 58ch">Regulated iGaming operations alongside KYC, Payments and Risk. Designed the payment-error workflow that cut resolution time by 25%.</p>
+              </div>
+              <span style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--anchor); text-align: right">95%+ QA · 400/day</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 200px 1fr 260px; gap: 32px; padding: 26px 0; border-bottom: 1px solid var(--border-subtle); align-items: baseline">
+              <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--text-muted)">2020 – 2021</span>
+              <div>
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); font-weight: 500; color: var(--text-strong)">Teaching Mentor Manager — AmazingTalker</div>
+                <p style="font-size: var(--text-sm); line-height: 1.6; color: var(--text-body); margin: 6px 0 0; max-width: 58ch">Owned a B2C book of accounts and coached a cohort of teachers on retention.</p>
+              </div>
+              <span style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--anchor); text-align: right">Top 5% of sales</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 200px 1fr 260px; gap: 32px; padding: 26px 0; border-bottom: 1px solid var(--border-subtle); align-items: baseline">
+              <span style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--text-muted)">2009 – 2010</span>
+              <div>
+                <div style="font-family: var(--font-display); font-size: var(--text-lg); font-weight: 500; color: var(--text-strong)">Corporate Sales Representative — Fuji Xerox, Kyushu</div>
+                <p style="font-size: var(--text-sm); line-height: 1.6; color: var(--text-body); margin: 6px 0 0; max-width: 58ch">Full-cycle B2B sales to SMBs and local government, including relationships across Toyota.</p>
+              </div>
+              <span style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--anchor); text-align: right">40+ accounts</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--paper); padding: 0 48px 80px">
+          <div style="max-width: 640px">
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Testimonial" quote="Placeholder — a line from a former Easygo lead about staying calm and precise at 400 touchpoints a day." name="Reference name" title="Role · Company" hint-size="100%,240px"></x-import>
+          </div>
+        </div>
+
+        <div style="background: var(--sage-900); padding: 72px 48px">
+          <div style="display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center">
+            <div>
+              <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-4xl); letter-spacing: -0.02em; color: var(--dark-text); margin: 0 0 12px">Let's talk — in either language.</h2>
+              <p style="font-size: var(--text-base); line-height: 1.65; color: var(--dark-muted); margin: 0; max-width: 52ch">Open to delivery/PM, customer-success and AML/KYC operations roles — and to consulting on Japan–APAC market entry.</p>
+            </div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end">
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="primary" icon-right="mail" hint-size="140px,44px">Email me</x-import>
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="secondary" icon-right="arrow-up-right" hint-size="150px,44px">LinkedIn</x-import>
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="secondary" icon-right="arrow-down" hint-size="160px,44px">Full résumé</x-import>
+            </div>
+          </div>
+          <div style="border-top: 1px solid rgba(243,235,221,.15); margin-top: 56px; padding-top: 24px; display: flex; justify-content: space-between; font-size: var(--text-xs); color: var(--dark-muted)">
+            <span>Mio Terasaki · Melbourne, VIC</span>
+            <span>mioterasaki@gmail.com · linkedin.com/in/mioterasaki</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============ OPTION 1b — Bridge-first bilingual ============ -->
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Bridge-first — bilingual hero, side-by-side comparison</div>
+      <div class="dv-card" style="width: 1240px" data-screen-label="1b Bridge-first home">
+
+        <nav style="display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: var(--paper); border-bottom: 1px solid var(--border-subtle)">
+          <span style="font-family: var(--font-display); font-size: var(--text-xl); font-weight: 600; color: var(--text-strong); letter-spacing: -0.02em">Mio Terasaki <span style="font-size: var(--text-sm); color: var(--text-muted); font-family: var(--font-body); font-weight: 400; margin-left: 8px">寺崎 美緒</span></span>
+          <div style="display: flex; align-items: center; gap: 30px">
+            <a href="#1b" style="font-size: var(--text-sm); font-weight: 500; color: var(--text-body)">Experience</a>
+            <a href="#1b" style="font-size: var(--text-sm); font-weight: 500; color: var(--text-body)">Contact</a>
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" size="sm" variant="secondary" hint-size="110px,36px">Let's talk</x-import>
+          </div>
+        </nav>
+
+        <div style="background: var(--paper); padding: 88px 48px 64px; position: relative; overflow: hidden; text-align: center">
+          <span style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); font-family: var(--font-display); font-size: 300px; line-height: 1; color: var(--sand-deep); opacity: 0.55; white-space: nowrap; pointer-events: none; user-select: none">架け橋</span>
+          <div style="position: relative">
+            <div style="display: flex; justify-content: center; margin-bottom: 26px">
+              <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hs-1b" shape="circle" fit="cover" placeholder="Headshot" hint-size="128px,128px" style="width: 128px; height: 128px"></x-import>
+            </div>
+            <div style="font-family: var(--font-body); font-weight: 600; font-size: var(--text-xs); letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand)">Kakehashi — a bridge between cultures</div>
+            <h1 style="font-family: var(--font-display); font-weight: 500; font-size: 60px; line-height: 1.06; letter-spacing: -0.02em; color: var(--text-strong); margin: 18px auto 20px; max-width: 18ch">I help Japanese and Western businesses understand each other.</h1>
+            <p style="font-size: var(--text-md); line-height: 1.65; color: var(--text-body); max-width: 58ch; margin: 0 auto">Native Japanese, fluent English. Enterprise sales in Kyushu, high-volume regulated operations in Melbourne — 10+ years working both sides of the gap most companies only read about.</p>
+            <div style="display: flex; gap: 14px; margin-top: 32px; justify-content: center">
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="primary" icon-right="arrow-right" hint-size="150px,44px">Let's talk</x-import>
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="ghost" hint-size="170px,44px">View experience</x-import>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 48px; margin-top: 48px; border-top: 1px solid var(--border-subtle); padding-top: 32px">
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Stat" value="10+ yrs" label="Japan &amp; Australia" hint-size="160px,76px"></x-import>
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Stat" value="95%+" label="QA at 400 tickets/day" accent="sage" hint-size="160px,76px"></x-import>
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Stat" value="Top 5%" label="sales rank" hint-size="160px,76px"></x-import>
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Stat" value="400+" label="clients retained" accent="sage" hint-size="160px,76px"></x-import>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--surface-sunken); padding: 64px 48px">
+          <div style="text-align: center; margin-bottom: 40px">
+            <div style="font-family: var(--font-body); font-weight: 600; font-size: var(--text-xs); letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand)">Same deal, two playbooks</div>
+            <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-3xl); letter-spacing: -0.02em; color: var(--text-strong); margin: 12px 0 0">What changes when you cross the bridge</h2>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--surface-card); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm)">
+            <div style="padding: 32px 36px; border-right: 1px solid var(--border-subtle)">
+              <div style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--anchor); margin-bottom: 20px">日本 · In Japan</div>
+              <div style="display: flex; flex-direction: column; gap: 18px">
+                <p style="margin: 0; font-size: var(--text-sm); line-height: 1.6; color: var(--text-body)"><strong style="color: var(--text-strong)">Consensus is built before the meeting.</strong> Nemawashi means every stakeholder is aligned one-on-one first.</p>
+                <p style="margin: 0; font-size: var(--text-sm); line-height: 1.6; color: var(--text-body)"><strong style="color: var(--text-strong)">Trust is earned over years.</strong> The relationship outlives any single contract — buyers invest in the person.</p>
+                <p style="margin: 0; font-size: var(--text-sm); line-height: 1.6; color: var(--text-body)"><strong style="color: var(--text-strong)">Silence is information.</strong> A pause isn't hesitation — it's respect, and often the real answer.</p>
+              </div>
+            </div>
+            <div style="padding: 32px 36px">
+              <div style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--brand); margin-bottom: 20px">West · In Australia</div>
+              <div style="display: flex; flex-direction: column; gap: 18px">
+                <p style="margin: 0; font-size: var(--text-sm); line-height: 1.6; color: var(--text-body)"><strong style="color: var(--text-strong)">The meeting is the decision.</strong> Come with the case, expect pushback, leave with an answer.</p>
+                <p style="margin: 0; font-size: var(--text-sm); line-height: 1.6; color: var(--text-body)"><strong style="color: var(--text-strong)">Trust is earned per quarter.</strong> Outcomes and metrics carry the renewal — deliver, then the relationship follows.</p>
+                <p style="margin: 0; font-size: var(--text-sm); line-height: 1.6; color: var(--text-body)"><strong style="color: var(--text-strong)">Silence is a problem.</strong> Speak up early, disagree openly, escalate fast.</p>
+              </div>
+            </div>
+          </div>
+          <p style="text-align: center; font-size: var(--text-base); line-height: 1.65; color: var(--text-body); max-width: 56ch; margin: 32px auto 0">I've worked inside both columns — selling to Toyota and local government in Saga, and running 100–400 daily touchpoints for a Melbourne tech operator. <strong style="color: var(--text-strong)">That's the bridge.</strong></p>
+        </div>
+
+        <div style="background: var(--paper); padding: 64px 48px">
+          <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-3xl); letter-spacing: -0.02em; color: var(--text-strong); margin: 0 0 36px; text-align: center">Ten years, two markets</h2>
+          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative">
+            <div style="position: absolute; top: 5px; left: 10%; right: 10%; height: 1.5px; background: var(--stone-200)"></div>
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; position: relative">
+              <span style="width: 11px; height: 11px; border-radius: 999px; background: var(--anchor)"></span>
+              <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted)">2009</span>
+              <div style="font-size: var(--text-sm); font-weight: 600; color: var(--text-strong); padding: 0 12px">Fuji Xerox, Kyushu</div>
+              <div style="font-size: var(--text-xs); line-height: 1.5; color: var(--text-body); padding: 0 12px">B2B sales · 40+ accounts incl. Toyota</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; position: relative">
+              <span style="width: 11px; height: 11px; border-radius: 999px; background: var(--anchor)"></span>
+              <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted)">2011</span>
+              <div style="font-size: var(--text-sm); font-weight: 600; color: var(--text-strong); padding: 0 12px">High school teacher, Japan</div>
+              <div style="font-size: var(--text-xs); line-height: 1.5; color: var(--text-body); padding: 0 12px">Presenting to 40 students daily</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; position: relative">
+              <span style="width: 11px; height: 11px; border-radius: 999px; background: var(--brand)"></span>
+              <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted)">2016</span>
+              <div style="font-size: var(--text-sm); font-weight: 600; color: var(--text-strong); padding: 0 12px">→ Australia · own business</div>
+              <div style="font-size: var(--text-xs); line-height: 1.5; color: var(--text-body); padding: 0 12px">400+ clients over 7 years</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; position: relative">
+              <span style="width: 11px; height: 11px; border-radius: 999px; background: var(--brand)"></span>
+              <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted)">2023</span>
+              <div style="font-size: var(--text-sm); font-weight: 600; color: var(--text-strong); padding: 0 12px">Easygo (Stake.com)</div>
+              <div style="font-size: var(--text-xs); line-height: 1.5; color: var(--text-body); padding: 0 12px">Regulated ops · KYC, payments, risk</div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; position: relative">
+              <span style="width: 11px; height: 11px; border-radius: 999px; background: var(--brand)"></span>
+              <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted)">2026</span>
+              <div style="font-size: var(--text-sm); font-weight: 600; color: var(--text-strong); padding: 0 12px">Founding ops lead, countfor.me</div>
+              <div style="font-size: var(--text-xs); line-height: 1.5; color: var(--text-body); padding: 0 12px">JP + Melbourne go-to-market</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--sage-900); padding: 72px 48px; text-align: center">
+          <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-4xl); letter-spacing: -0.02em; color: var(--dark-text); margin: 0 0 12px">はじめまして。Let's talk.</h2>
+          <p style="font-size: var(--text-base); line-height: 1.65; color: var(--dark-muted); margin: 0 auto; max-width: 52ch">Hiring for delivery, customer success or AML/KYC ops — or entering the Japanese market? I answer in whichever language you write in.</p>
+          <div style="display: flex; gap: 12px; justify-content: center; margin-top: 30px; flex-wrap: wrap">
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="primary" icon-right="mail" hint-size="140px,44px">Email me</x-import>
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="secondary" icon-right="calendar" hint-size="150px,44px">Book a call</x-import>
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="secondary" icon-right="arrow-down" hint-size="160px,44px">Full résumé</x-import>
+          </div>
+          <div style="border-top: 1px solid rgba(243,235,221,.15); margin-top: 56px; padding-top: 24px; display: flex; justify-content: space-between; font-size: var(--text-xs); color: var(--dark-muted)">
+            <span>Mio Terasaki · Melbourne, VIC</span>
+            <span>mioterasaki@gmail.com · linkedin.com/in/mioterasaki</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============ OPTION 1c — Sage editorial ============ -->
+    <div class="dv-opt" id="1c">
+      <div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Sage editorial — dark hero, case-study led</div>
+      <div class="dv-card" style="width: 1240px" data-screen-label="1c Sage editorial home">
+
+        <nav style="display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: var(--sage-900)">
+          <span style="font-family: var(--font-display); font-size: var(--text-xl); font-weight: 600; color: var(--dark-text); letter-spacing: -0.02em">Mio Terasaki</span>
+          <div style="display: flex; align-items: center; gap: 30px">
+            <a href="#1c" style="font-size: var(--text-sm); font-weight: 500; color: var(--dark-muted)">Experience</a>
+            <a href="#1c" style="font-size: var(--text-sm); font-weight: 500; color: var(--dark-muted)">The bridge</a>
+            <a href="#1c" style="font-size: var(--text-sm); font-weight: 500; color: var(--dark-muted)">Contact</a>
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" size="sm" variant="primary" hint-size="110px,36px">Let's talk</x-import>
+          </div>
+        </nav>
+
+        <div style="background: var(--sage-900); padding: 80px 48px 88px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 64px; align-items: center">
+          <div>
+            <div style="font-family: var(--font-body); font-weight: 600; font-size: var(--text-xs); letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-500)">Tokyo-grade service · Melbourne-grade scale</div>
+            <h1 style="font-family: var(--font-display); font-weight: 500; font-size: 62px; line-height: 1.05; letter-spacing: -0.02em; color: var(--dark-text); margin: 18px 0 22px">Ten years of turning cross-cultural nuance into commercial results.</h1>
+            <p style="font-size: var(--text-md); line-height: 1.65; color: var(--dark-muted); max-width: 50ch; margin: 0">Bilingual sales, customer success and operations — from consultative enterprise selling in Japan to regulated iGaming operations in Australia. Now moving into delivery management and financial-crime operations.</p>
+            <div style="display: flex; gap: 14px; margin-top: 32px">
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="primary" icon-right="arrow-right" hint-size="150px,44px">Let's talk</x-import>
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="secondary" hint-size="170px,44px">View experience</x-import>
+            </div>
+            <div style="display: flex; gap: 44px; margin-top: 48px; border-top: 1px solid rgba(243,235,221,.15); padding-top: 30px">
+              <div style="display: flex; flex-direction: column; gap: 4px">
+                <span style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--gold-500)">95%+</span>
+                <span style="font-size: var(--text-xs); color: var(--dark-muted)">QA at Easygo (Stake.com)</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 4px">
+                <span style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--gold-500)">−25%</span>
+                <span style="font-size: var(--text-xs); color: var(--dark-muted)">ticket resolution time</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 4px">
+                <span style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--gold-500)">Top 5%</span>
+                <span style="font-size: var(--text-xs); color: var(--dark-muted)">sales rank, AmazingTalker</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 4px">
+                <span style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--gold-500)">400+</span>
+                <span style="font-size: var(--text-xs); color: var(--dark-muted)">clients retained</span>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: center">
+            <div style="width: 340px; height: 340px; border-radius: 999px; padding: 10px; background: linear-gradient(150deg, var(--gold-500), var(--terracotta-500)); box-shadow: var(--shadow-xl)">
+              <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hs-1c" shape="circle" fit="cover" placeholder="Drop your headshot" hint-size="100%,100%" style="width: 320px; height: 320px"></x-import>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--paper); padding: 72px 48px">
+          <div style="font-family: var(--font-body); font-weight: 600; font-size: var(--text-xs); letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand)">Proof, not adjectives</div>
+          <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-3xl); letter-spacing: -0.02em; color: var(--text-strong); margin: 14px 0 36px">Three things I've actually shipped</h2>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px">
+            <div style="background: var(--surface-card); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 14px">
+              <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted); letter-spacing: 0.04em">EASYGO (STAKE.COM) · 2023–26</span>
+              <span style="font-family: var(--font-display); font-size: var(--text-4xl); color: var(--brand); line-height: 1">−25%</span>
+              <h3 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-xl); color: var(--text-strong); margin: 0">Payment-error workflow, designed from the frontline</h3>
+              <p style="font-size: var(--text-sm); line-height: 1.65; color: var(--text-body); margin: 0">Spotted the recurring failure pattern across 100–400 daily touchpoints, designed a structured workflow with Payments and Risk, and cut ticket resolution time by a quarter.</p>
+            </div>
+            <div style="background: var(--surface-card); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 14px">
+              <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted); letter-spacing: 0.04em">AMAZINGTALKER · 2020–21</span>
+              <span style="font-family: var(--font-display); font-size: var(--text-4xl); color: var(--brand); line-height: 1">Top 5%</span>
+              <h3 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-xl); color: var(--text-strong); margin: 0">A retention playbook that scaled beyond me</h3>
+              <p style="font-size: var(--text-sm); line-height: 1.65; color: var(--text-body); margin: 0">Ranked top 5% of salespeople, then standardised the evaluation and onboarding materials so a whole cohort of teachers could retain accounts the same way.</p>
+            </div>
+            <div style="background: var(--surface-card); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 14px">
+              <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted); letter-spacing: 0.04em">INDEPENDENT · 2016–23</span>
+              <span style="font-family: var(--font-display); font-size: var(--text-4xl); color: var(--brand); line-height: 1">7 yrs</span>
+              <h3 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-xl); color: var(--text-strong); margin: 0">A 400-client book, built and kept single-handed</h3>
+              <p style="font-size: var(--text-sm); line-height: 1.65; color: var(--text-body); margin: 0">Acquisition, onboarding, renewals and referrals for 400+ clients — the full account-management cycle, run alone, for seven years.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--surface-sunken); padding: 72px 48px">
+          <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: start">
+            <div>
+              <div style="font-family: var(--font-body); font-weight: 600; font-size: var(--text-xs); letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand)">The bridge</div>
+              <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-3xl); letter-spacing: -0.02em; color: var(--text-strong); margin: 14px 0 16px">Two business cultures, read fluently</h2>
+              <p style="font-size: var(--text-base); line-height: 1.65; color: var(--text-body); margin: 0">Most companies learn these differences by losing a deal. I learned them by living on both sides — and I use them to keep deals, teams and customers from falling into the gap.</p>
+            </div>
+            <div style="display: flex; flex-direction: column">
+              <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--stone-200)">
+                <span style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--stone-300)">01</span>
+                <div>
+                  <h3 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-lg); color: var(--text-strong); margin: 0 0 6px">Consensus is built before the meeting</h3>
+                  <p style="font-size: var(--text-sm); line-height: 1.6; color: var(--text-body); margin: 0">Nemawashi vs. deciding in the room — I prepare stakeholders the way their culture expects.</p>
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--stone-200)">
+                <span style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--stone-300)">02</span>
+                <div>
+                  <h3 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-lg); color: var(--text-strong); margin: 0 0 6px">Trust runs on different clocks</h3>
+                  <p style="font-size: var(--text-sm); line-height: 1.6; color: var(--text-body); margin: 0">Years-long relationships in Japan, quarter-by-quarter outcomes in the West — I run both renewal playbooks.</p>
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; padding: 22px 0">
+                <span style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--stone-300)">03</span>
+                <div>
+                  <h3 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-lg); color: var(--text-strong); margin: 0 0 6px">Service floors are set differently</h3>
+                  <p style="font-size: var(--text-sm); line-height: 1.6; color: var(--text-body); margin: 0">Omotenashi sets an uncompromising standard — I hold it at Western volume: 95%+ QA at 400 touchpoints a day.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--paper); padding: 72px 48px">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px">
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Testimonial" variant="dark" quote="Placeholder — a former manager on your cross-team work with Payments, Risk and KYC." name="Reference name" title="Role · Easygo (Stake.com)" hint-size="100%,260px"></x-import>
+            <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Testimonial" variant="dark" quote="Placeholder — a long-term client on seven years of renewals and referrals." name="Reference name" title="Client · Independent practice" hint-size="100%,260px"></x-import>
+          </div>
+        </div>
+
+        <div style="background: var(--paper); border-top: 1px solid var(--border-subtle); padding: 64px 48px">
+          <div style="display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center">
+            <div>
+              <h2 style="font-family: var(--font-display); font-weight: 500; font-size: var(--text-4xl); letter-spacing: -0.02em; color: var(--text-strong); margin: 0 0 12px">Bring me the gap.</h2>
+              <p style="font-size: var(--text-base); line-height: 1.65; color: var(--text-body); margin: 0; max-width: 52ch">Delivery/PM, customer success, AML/KYC operations, or Japan market entry — email, book a call, or find me on LinkedIn.</p>
+            </div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end">
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="primary" icon-right="mail" hint-size="140px,44px">Email me</x-import>
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="ghost" icon-right="calendar" hint-size="150px,44px">Book a call</x-import>
+              <x-import component-from-global-scope="MioTerasakiBrandSystem_051fd5.Button" variant="ghost" icon-right="arrow-down" hint-size="160px,44px">Full résumé</x-import>
+            </div>
+          </div>
+          <div style="border-top: 1px solid var(--border-subtle); margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; font-size: var(--text-xs); color: var(--text-muted)">
+            <span>Mio Terasaki · Melbourne, VIC</span>
+            <span>mioterasaki@gmail.com · linkedin.com/in/mioterasaki</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <p class="dv-next">Try next: "build out <a class="dv-oid" href="#1a">1a</a> as the full multi-page site" · "use <a class="dv-oid" href="#1b">1b</a>'s comparison section inside <a class="dv-oid" href="#1a">1a</a>" · "make the hero of <a class="dv-oid" href="#1c">1c</a> lighter"</p>
+</section>
+
+</x-dc>
+</body>
+</html>

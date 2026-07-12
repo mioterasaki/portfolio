@@ -1,0 +1,36 @@
+/* ============================================================
+   BASE — light element defaults + helpers.
+   Kept minimal so consumers inherit the warm baseline.
+   ============================================================ */
+body {
+  background: var(--bg-base);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  color: var(--text-strong);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+/* Links — always defined so editor-added links aren't browser-blue */
+a { color: var(--brand); text-decoration: none; transition: color var(--dur-fast) var(--ease-standard); }
+a:hover { color: var(--brand-press); }
+
+::selection { background: var(--gold-300); color: var(--ink); }
+
+.eyebrow {
+  font-family: var(--eyebrow-family);
+  font-weight: var(--eyebrow-weight);
+  font-size: var(--eyebrow-size);
+  letter-spacing: var(--eyebrow-tracking);
+  text-transform: uppercase;
+  color: var(--brand);
+}

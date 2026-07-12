@@ -1,0 +1,99 @@
+/* ============================================================
+   COLORS — Mio Terasaki Brand System
+   Warm-modern · Terracotta & Sage
+   Base ramps first, semantic aliases second.
+   ============================================================ */
+:root {
+  /* --- Terracotta (primary brand) --- */
+  --terracotta-50:  #FBEDE7;
+  --terracotta-100: #F6D8CB;
+  --terracotta-200: #F0BFAA;
+  --terracotta-300: #EEA98F;
+  --terracotta-400: #E88E6E;
+  --terracotta-500: #E07856;  /* base */
+  --terracotta-600: #CF6547;
+  --terracotta-700: #C8553D;  /* deep — hover/press */
+  --terracotta-800: #A6432F;
+
+  /* --- Gold (secondary accent / highlight) --- */
+  --gold-100: #FBEBC7;
+  --gold-200: #F8DEA6;
+  --gold-300: #F6D89A;
+  --gold-400: #F4CE85;
+  --gold-500: #F2C879;  /* base */
+  --gold-600: #E3B45A;
+  --gold-700: #D9A441;
+
+  /* --- Sage (deep anchor / calm accent) --- */
+  --sage-200: #C4CFC7;
+  --sage-300: #8CA093;
+  --sage-400: #648073;
+  --sage-500: #4A5D52;  /* base */
+  --sage-600: #3E4F46;
+  --sage-700: #3A4A41;
+  --sage-900: #2A3830;
+
+  /* --- Warm neutrals (stone) --- */
+  --paper:        #FFFBF5;  /* page background */
+  --paper-raised: #FFFFFF;  /* cards on paper */
+  --sand:         #F7F1E8;  /* sunken / alt surface */
+  --sand-deep:    #F0E7D8;
+  --stone-100:    #EFE6D8;  /* hairline border */
+  --stone-200:    #E6DDD0;  /* border */
+  --stone-300:    #B8AFA4;
+  --stone-400:    #9A9086;
+  --stone-500:    #8A8078;  /* muted text */
+  --stone-600:    #6E645B;
+  --stone-700:    #5A5049;  /* body text */
+  --ink:          #2E2A26;  /* strong text */
+  --ink-pure:     #221E1B;
+
+  /* --- Status (kept warm) --- */
+  --success-500: #3E7A5E;
+  --success-50:  #E6F0EA;
+  --warning-500: #D9A441;
+  --warning-50:  #FBEECB;
+  --danger-500:  #C0473A;
+  --danger-50:   #F7E2DE;
+  --info-500:    #5A7A86;
+  --info-50:     #E4EDF0;
+
+  /* ==========================================================
+     SEMANTIC ALIASES
+     ========================================================== */
+  --bg-base:         var(--paper);
+  --surface-card:    var(--paper-raised);
+  --surface-sunken:  var(--sand);
+  --surface-alt:     var(--sand-deep);
+
+  --text-strong:     var(--ink);
+  --text-body:       var(--stone-700);
+  --text-muted:      var(--stone-500);
+  --text-on-brand:   #FFFFFF;
+  --text-on-dark:    #F3EBDD;
+
+  --border:          var(--stone-200);
+  --border-subtle:   var(--stone-100);
+  --border-strong:   var(--stone-300);
+
+  --brand:           var(--terracotta-500);
+  --brand-hover:     var(--terracotta-600);
+  --brand-press:     var(--terracotta-700);
+  --brand-soft:      var(--terracotta-50);
+  --brand-contrast:  #FFFFFF;
+
+  --accent:          var(--gold-500);
+  --accent-soft:     var(--gold-100);
+
+  --anchor:          var(--sage-500);   /* deep secondary — headings on dark, ghost btns */
+  --anchor-hover:    var(--sage-600);
+  --anchor-soft:     var(--sage-200);
+
+  --focus-ring:      rgba(224,120,86,.38);
+
+  /* Dark section (footer / hero variants) */
+  --dark-bg:         var(--sage-900);
+  --dark-surface:    var(--sage-700);
+  --dark-text:       #F3EBDD;
+  --dark-muted:      #B7C1B8;
+}

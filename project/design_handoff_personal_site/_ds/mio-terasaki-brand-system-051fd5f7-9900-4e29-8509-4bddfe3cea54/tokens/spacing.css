@@ -1,0 +1,33 @@
+/* ============================================================
+   SPACING & LAYOUT — Mio Terasaki Brand System
+   4px base grid.
+   ============================================================ */
+:root {
+  --space-0:   0;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32:  128px;
+
+  /* Semantic spacing */
+  --gap-inline:    var(--space-3);   /* between inline controls */
+  --gap-stack:     var(--space-4);   /* vertical rhythm */
+  --pad-card:      var(--space-6);   /* default card padding */
+  --pad-section:   var(--space-24);  /* section vertical padding */
+  --pad-page-x:    var(--space-16);  /* page gutter (desktop) */
+
+  /* Container widths */
+  --container-sm:  640px;
+  --container-md:  880px;
+  --container-lg:  1120px;
+  --container-xl:  1280px;
+}

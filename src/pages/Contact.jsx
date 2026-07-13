@@ -1,6 +1,7 @@
 import Nav from '../components/Nav'
 import ContactCard from '../components/ContactCard'
 import { MailIcon, LinkedinIcon, CalendarIcon, ArrowDownIcon, LanguagesIcon } from '../components/icons'
+import { useLanguage } from '../i18n'
 import '../styles/Contact.css'
 
 const EMAIL = 'mioterasaki@gmail.com'
@@ -8,18 +9,17 @@ const LINKEDIN_URL = 'https://linkedin.com/in/mioterasaki'
 const RESUME_URL = '/resume/Mio_Terasaki_Master_Resume_v2.pdf'
 
 export default function Contact() {
+  const { t } = useLanguage()
+  const c = t.contact
   return (
     <div className="page" data-screen-label="Contact">
       <Nav active="contact" showCta={false} />
 
       <header className="header">
         <div>
-          <div className="header__eyebrow">Contact · どうぞよろしく</div>
-          <h1 className="header__title">Let's talk — in either language.</h1>
-          <p className="header__lede">
-            Hiring for delivery/PM, customer success or AML/KYC operations — or planning a move
-            into the Japanese market? Write in English or Japanese; I answer in whichever you use.
-          </p>
+          <div className="header__eyebrow">{c.eyebrow}</div>
+          <h1 className="header__title">{c.title}</h1>
+          <p className="header__lede">{c.lede}</p>
         </div>
         <div className="header__portrait">
           <img src="/assets/headshot.png" alt="Mio Terasaki" />
@@ -31,47 +31,46 @@ export default function Contact() {
           <ContactCard
             href={`mailto:${EMAIL}`}
             icon={<MailIcon />}
-            title="Email"
-            body="The fastest way to reach me."
+            title={c.cards.email.title}
+            body={c.cards.email.body}
             detail={EMAIL}
           />
           <ContactCard
             href={LINKEDIN_URL}
             target="_blank"
             icon={<LinkedinIcon />}
-            title="LinkedIn"
-            body="Connect, or message me directly."
+            title={c.cards.linkedin.title}
+            body={c.cards.linkedin.body}
             detail="linkedin.com/in/mioterasaki"
           />
           <ContactCard
             href={`mailto:${EMAIL}?subject=Booking%20a%20call`}
             icon={<CalendarIcon />}
-            title="Book a call"
-            body="Suggest a time by email — happy to work around AEST or JST."
-            detail="Melbourne (AEST)"
+            title={c.cards.call.title}
+            body={c.cards.call.body}
+            detail={c.cards.call.detail}
           />
           <ContactCard
             href={RESUME_URL}
             target="_blank"
             icon={<ArrowDownIcon />}
-            title="Résumé"
-            body="The master résumé — full record of roles and results."
-            detail="PDF · 3 pages"
+            title={c.cards.resume.title}
+            body={c.cards.resume.body}
+            detail={c.cards.resume.detail}
           />
         </div>
 
         <div className="languages">
           <LanguagesIcon className="languages__icon" />
           <p className="languages__text">
-            <strong>Working languages:</strong> native Japanese (business level) and fluent
-            English, written and spoken. Based in Melbourne, VIC — available for remote work
-            across APAC time zones.
+            <strong>{c.languagesLabel}</strong>
+            {c.languagesText}
           </p>
         </div>
       </section>
 
       <footer className="footer">
-        <span>Mio Terasaki · Melbourne, VIC</span>
+        <span>{c.location}</span>
         <span>
           {EMAIL} · <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">linkedin.com/in/mioterasaki</a>
         </span>

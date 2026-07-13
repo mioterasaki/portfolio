@@ -3,17 +3,15 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-route
 import Home from './pages/Home'
 import Experience from './pages/Experience'
 import Contact from './pages/Contact'
-
-const titles = {
-  '/': 'Mio Terasaki — Bilingual sales, CS & operations',
-  '/experience': 'Experience — Mio Terasaki',
-  '/contact': 'Contact — Mio Terasaki',
-}
+import { LanguageProvider, useLanguage } from './i18n'
 
 function PageChrome() {
   const { pathname } = useLocation()
+  const { t } = useLanguage()
   useEffect(() => {
-    document.title = titles[pathname] || titles['/']
+    document.title = t.titles[pathname] || t.titles['/']
+  }, [pathname, t])
+  useEffect(() => {
     window.scrollTo(0, 0)
   }, [pathname])
   return null
@@ -22,13 +20,15 @@ function PageChrome() {
 export default function App() {
   return (
     <BrowserRouter>
-      <PageChrome />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      <LanguageProvider>
+        <PageChrome />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </LanguageProvider>
     </BrowserRouter>
   )
 }

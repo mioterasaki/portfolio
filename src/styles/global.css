@@ -48,6 +48,15 @@ a:hover {
   }
 }
 
+/* CJK text reads poorly with negative tracking — reset it in Japanese mode
+   (overrides the per-class -0.02em values thanks to higher specificity). */
+html[lang='ja'] h1,
+html[lang='ja'] h2,
+html[lang='ja'] h3,
+html[lang='ja'] h4 {
+  letter-spacing: 0;
+}
+
 .eyebrow {
   font-family: var(--font-body);
   font-weight: var(--weight-semibold);

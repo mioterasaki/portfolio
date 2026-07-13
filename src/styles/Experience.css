@@ -3,7 +3,8 @@
    ============================================================ */
 
 .experience {
-  min-width: 1080px;
+  min-width: 0;
+  overflow-x: hidden;
 }
 
 /* --- Header --- */
@@ -24,7 +25,7 @@
 .exp-header__title {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 54px;
+  font-size: clamp(30px, 4.5vw, 54px);
   line-height: 1.06;
   letter-spacing: -0.02em;
   color: var(--dark-text);
@@ -203,4 +204,66 @@
   justify-content: space-between;
   font-size: var(--text-xs);
   color: var(--dark-muted);
+}
+
+/* ============================================================
+   RESPONSIVE — tablet and below
+   ============================================================ */
+@media (max-width: 1024px) {
+  .exp-header {
+    padding: 48px 40px 44px;
+  }
+  .timeline,
+  .skills-edu,
+  .exp-footer {
+    padding: 48px 40px;
+  }
+  .skills-edu__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .role {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 28px 0;
+  }
+  .role__when {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .exp-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .exp-footer__actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .exp-header {
+    padding: 36px 20px 36px;
+  }
+  .timeline,
+  .skills-edu,
+  .exp-footer {
+    padding: 40px 20px;
+  }
+  .exp-footer__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .exp-footer__meta {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .edu-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
 }

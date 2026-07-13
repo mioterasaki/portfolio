@@ -186,3 +186,12 @@
   --dur-slow:   360ms;
   --press-scale: 0.97;
 }
+
+/* --- Japanese mode (html[lang] is set by the nav language switch) ---
+   Latin faces stay for numerals/Latin runs; JP system faces fill in kana/kanji.
+   CJK dislikes negative tracking, so it resets to 0. */
+html[lang='ja'] {
+  --font-display: 'Newsreader', 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', Georgia, serif;
+  --font-body: 'Hanken Grotesk', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Noto Sans JP', Meiryo, system-ui, sans-serif;
+  --tracking-tight: 0;
+}

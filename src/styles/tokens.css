@@ -187,6 +187,37 @@
   --press-scale: 0.97;
 }
 
+/* --- Dark mode (html[data-theme] is set pre-paint by index.html and by the
+   nav toggle; default follows the OS). The sage-900 hero/nav/footer sections
+   are already dark and stay untouched — these overrides re-skin the warm
+   paper surfaces by redefining the primitive stones/paper, so every semantic
+   alias (--bg-base, --surface-card, --text-body, --border…) follows along. */
+html[data-theme='dark'] {
+  color-scheme: dark;
+
+  --paper:        #1E1B16;
+  --paper-raised: #282420;
+  --sand:         #262218;
+  --sand-deep:    #2F2A22;
+  --stone-100:    #362F27;
+  --stone-200:    #423A30;
+  --stone-300:    #6E645B;
+  --stone-500:    #9A9086;
+  --stone-700:    #CDC3B6;
+  --ink:          #F3EBDD;
+
+  --shadow-xs:  0 1px 2px rgba(0,0,0,.25);
+  --shadow-sm:  0 2px 6px rgba(0,0,0,.3);
+  --shadow-md:  0 10px 24px -8px rgba(0,0,0,.45);
+  --shadow-lg:  0 24px 50px -16px rgba(0,0,0,.55);
+  --shadow-xl:  0 40px 80px -24px rgba(0,0,0,.6);
+}
+
+html[data-theme='dark'] ::selection {
+  background: var(--gold-300);
+  color: #2E2A26;
+}
+
 /* --- Japanese mode (html[lang] is set by the nav language switch) ---
    Latin faces stay for numerals/Latin runs; JP system faces fill in kana/kanji.
    CJK dislikes negative tracking, so it resets to 0. */

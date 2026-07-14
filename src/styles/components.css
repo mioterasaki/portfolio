@@ -72,6 +72,30 @@
   color: var(--ink-pure);
 }
 
+/* --- Theme toggle (sun/moon button in the nav) --- */
+.theme-toggle {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border: 1px solid rgba(243, 235, 221, 0.3);
+  border-radius: var(--radius-pill);
+  color: var(--dark-muted);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-standard),
+              border-color var(--dur-fast) var(--ease-standard);
+}
+.theme-toggle:hover {
+  color: var(--gold-500);
+  border-color: var(--gold-500);
+}
+.theme-toggle svg {
+  display: block;
+}
+
 /* --- Button (pill CTA) --- */
 .btn {
   display: inline-flex;
@@ -219,6 +243,28 @@
   color: var(--text-body);
 }
 
+/* Dark mode: the pastel badge fills and ghost-button sage read poorly on
+   dark paper — swap to translucent fills with lighter accent text. */
+html[data-theme='dark'] .badge--terracotta {
+  background: rgba(224, 120, 86, 0.16);
+  color: var(--terracotta-300);
+}
+html[data-theme='dark'] .badge--gold {
+  background: rgba(242, 200, 121, 0.14);
+  color: var(--gold-400);
+}
+html[data-theme='dark'] .badge--sage {
+  background: rgba(140, 160, 147, 0.16);
+  color: var(--sage-300);
+}
+html[data-theme='dark'] .btn--ghost {
+  color: var(--sage-200);
+}
+html[data-theme='dark'] .btn--ghost:hover {
+  color: var(--sage-200);
+  border-color: var(--sage-300);
+}
+
 /* --- Testimonial (dark variant) --- */
 .testimonial {
   margin: 0;
@@ -317,6 +363,10 @@
   }
   .lang-toggle__btn {
     padding: 4px 10px;
+  }
+  .theme-toggle {
+    width: 30px;
+    height: 30px;
   }
   .testimonial {
     padding: var(--space-6);

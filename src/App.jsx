@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Experience from './pages/Experience'
 import Contact from './pages/Contact'
 import { LanguageProvider, useLanguage } from './i18n'
+import { ThemeProvider } from './theme'
 
 function PageChrome() {
   const { pathname } = useLocation()
@@ -20,15 +21,17 @@ function PageChrome() {
 export default function App() {
   return (
     <BrowserRouter>
-      <LanguageProvider>
-        <PageChrome />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </LanguageProvider>
+      <ThemeProvider>
+        <LanguageProvider>
+          <PageChrome />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </LanguageProvider>
+      </ThemeProvider>
     </BrowserRouter>
   )
 }
